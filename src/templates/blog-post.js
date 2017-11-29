@@ -1,5 +1,11 @@
-import React from 'react';
-import Helmet from 'react-helmet';
+import React from "react";
+import Helmet from "react-helmet";
+import styled from "styled-components";
+
+const PostHeader = styled.span`
+  font-size: 2rem;
+  font-weight: bold;
+`;
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data;
@@ -9,7 +15,7 @@ export default function Template({ data }) {
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">{post.frontmatter.title}</h1>
+            <PostHeader>{post.frontmatter.title}</PostHeader>
             <p>{post.frontmatter.description}</p>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
