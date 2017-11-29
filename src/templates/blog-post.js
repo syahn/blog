@@ -7,12 +7,17 @@ const PostHeader = styled.span`
   font-weight: bold;
 `;
 
+const PostBody = styled.div`
+  width: 40%;
+  margin: 0 auto;
+`;
+
 export default function Template({ data }) {
   const { markdownRemark: post } = data;
   return (
     <section className="section">
       <Helmet title={`Blog | ${post.frontmatter.title}`} />
-      <div className="container content">
+      <PostBody>
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <PostHeader>{post.frontmatter.title}</PostHeader>
@@ -20,7 +25,7 @@ export default function Template({ data }) {
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
         </div>
-      </div>
+      </PostBody>
     </section>
   );
 }

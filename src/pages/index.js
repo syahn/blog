@@ -5,7 +5,7 @@ import Script from "react-load-script";
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 0%;
+  width: 50%;
   margin: 0 auto;
 `;
 
