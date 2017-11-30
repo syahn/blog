@@ -1,22 +1,24 @@
-import React from 'react';
+import React from "react";
+import styled from "styled-components";
 
 export default ({ data }) => {
   const { markdownRemark: post } = data;
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">{post.frontmatter.title}</h2>
-              <div className="content" dangerouslySetInnerHTML={{ __html: post.html }} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Post>
+      <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+        {post.frontmatter.title}
+      </h2>
+      <div
+        className="content"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
+    </Post>
   );
 };
+const Post = styled.section`
+  margin: 7rem auto;
+  max-width: 800px;
+`;
 
 export const aboutPageQuery = graphql`
   query AboutPage($path: String!) {

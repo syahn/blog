@@ -5,13 +5,14 @@ import Script from "react-load-script";
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 50%;
+  max-width: 800px;
   margin: 0 auto;
 `;
 
 const PostHeader = styled.p`
   font-size: 1.5rem;
-  font-weight: bold;
+  color: #343a40;
+  font-weight: 500;
 `;
 
 export default class IndexPage extends React.Component {
@@ -44,7 +45,7 @@ export default class IndexPage extends React.Component {
               return (
                 <div
                   className="content"
-                  style={{ padding: "2em 4em" }}
+                  style={{ padding: "6em 2.5em 0" }}
                   key={post.id}
                 >
                   <PostHeader>

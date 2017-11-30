@@ -1,7 +1,7 @@
 ---
 templateKey: 'about-page'
-path: /about
-
+path: /tech
+title: 
 ---
 
 쓰는 중

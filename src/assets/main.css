@@ -2,7 +2,13 @@ html {
   font-family: Helvetica, sans-serif;
 }
 
-a {
+a,
+a:visited {
   text-decoration: none;
   color: inherit;
+  transition-duration: 0.3s;
+}
+
+a:hover {
+  color: #1c4376;
 }
