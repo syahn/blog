@@ -1,6 +1,6 @@
 ---
-templateKey: blog-post
-path: skm-architects-방문-그리고-켄민성진
+templateKey: 'blog-post'
+path: /skm-architects-방문-그리고-켄민성진
 title: 'SKM Architects 방문, 그리고 켄민성진'
 date: 2017-10-28T00:00:00+09:00
 ---
