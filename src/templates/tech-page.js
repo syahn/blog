@@ -16,7 +16,7 @@ export default ({ data }) => {
     <div>
       <Container>
         {posts
-          .filter(post => post.node.frontmatter.templateKey === "blog-post")
+          .filter(post => post.node.frontmatter.templateKey === "tech-post")
           .map(({ node: post }) => {
             return (
               <Content key={post.id}>
@@ -51,7 +51,7 @@ const Post = styled.section`
 `;
 
 export const pageQuery = graphql`
-  query BlogQuery {
+  query TechQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {

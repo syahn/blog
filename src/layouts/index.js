@@ -10,34 +10,6 @@ import Header from "../components/Header";
 
 import "../assets/main.css";
 
-const Navbar = () => (
-  <nav className="navbar is-transparent">
-    <div className="container">
-      <Header />
-      {/* <div className="navbar-start">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-      </div>
-      <div className="navbar-end">
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
-      </div> */}
-    </div>
-  </nav>
-);
-
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet title="Frank's" />

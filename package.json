@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "name": "Frank's",
+  "description": "",
   "version": "1.0.0",
-  "author": "Austin Green",
+  "author": "Frank Ahn",
   "dependencies": {
     "bulma": "^0.6.0",
     "gatsby": "^1.9.63",
@@ -16,6 +16,7 @@
     "gatsby-source-filesystem": "^1.5.5",
     "gatsby-transformer-remark": "^1.7.17",
     "gatsby-transformer-sharp": "^1.6.13",
+    "lodash": "^4.17.4",
     "react-load-script": "0.0.6",
     "styled-components": "^2.2.3",
     "typography": "^0.16.6",

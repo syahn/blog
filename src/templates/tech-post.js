@@ -35,7 +35,7 @@ const PostBody = styled.div`
 `;
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
+  query TechPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {

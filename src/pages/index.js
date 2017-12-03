@@ -3,16 +3,20 @@ import Link from "gatsby-link";
 import Helmet from "react-helmet";
 import Script from "react-load-script";
 import styled from "styled-components";
+import { Container, Content } from "../components/UI";
 
-const Container = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
+const CategoryLink = styled.span`
+  border-radius: 1rem;
+  padding: 0.3rem 1rem;
+  margin-right: 1rem;
+  background: rgba(0, 0, 0, 0.1);
 `;
 
-const PostHeader = styled.p`
-  font-size: 1.5rem;
+const PostHeader = styled.div`
+  font-size: 2rem;
   color: #343a40;
   font-weight: 500;
+  margin: 1rem 0;
 `;
 
 export default class IndexPage extends React.Component {
@@ -39,40 +43,33 @@ export default class IndexPage extends React.Component {
           onLoad={this.handleScriptLoad.bind(this)}
         />
         <Container>
-          {posts
-            .filter(post => post.node.frontmatter.templateKey === "blog-post")
-            .map(({ node: post }) => {
-              return (
-                <div
-                  className="content"
-                  style={{ padding: "6em 2.5em 0" }}
-                  key={post.id}
-                >
-                  <PostHeader>
-                    <Link
-                      className="has-text-primary"
-                      to={post.frontmatter.path}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                  </PostHeader>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
+          {posts.map(({ node: post }) => {
+            return (
+              <Content key={post.id}>
+                <CategoryLink>
+                  <Link to={post.fields.categorySlug}>
+                    {post.frontmatter.category}
+                  </Link>
+                </CategoryLink>
 
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link
-                      className="button is-small"
-                      to={post.frontmatter.path}
-                    >
-                      Keep Reading →
-                    </Link>
-                  </p>
-                </div>
-              );
-            })}
+                <small>{post.frontmatter.date}</small>
+                <PostHeader>
+                  <Link to={post.frontmatter.path}>
+                    {post.frontmatter.title}
+                  </Link>
+                </PostHeader>
+
+                <p>
+                  {post.excerpt}
+                  <br />
+                  <br />
+                  <Link className="button is-small" to={post.frontmatter.path}>
+                    Keep Reading →
+                  </Link>
+                </p>
+              </Content>
+            );
+          })}
         </Container>
       </div>
     );
@@ -81,7 +78,10 @@ export default class IndexPage extends React.Component {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { layout: { eq: "post" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 400)
@@ -89,8 +89,12 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date
             path
+            category
+          }
+          fields {
+            categorySlug
           }
         }
       }

@@ -1,7 +1,4 @@
 ---
-templateKey: 'about-page'
+templateKey: 'tech-page'
 path: /tech
-title: 
 ---
-
-쓰는 중

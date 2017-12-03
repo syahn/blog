@@ -1,6 +1,27 @@
 module.exports = {
   siteMetadata: {
-    title: `Frank's`
+    title: `Frank's`,
+    menu: [
+      {
+        label: "Articles",
+        path: "/"
+      },
+      {
+        label: "About me",
+        path: "/about/"
+      },
+      {
+        label: "Contact me",
+        path: "/contact/"
+      }
+    ],
+    author: {
+      name: "Frank Ahn",
+      email: "#",
+      twitter: "#",
+      github: "#",
+      rss: "#"
+    }
   },
   plugins: [
     {
