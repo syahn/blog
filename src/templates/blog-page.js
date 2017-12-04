@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "gatsby-link";
+import PostPage from "../components/PostPage";
 import { Container, Content } from "../components/UI";
 
 const PostHeader = styled.p`
@@ -10,41 +11,14 @@ const PostHeader = styled.p`
 `;
 
 export default ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark;
-
-  return (
-    <div>
-      <Container>
-        {posts
-          .filter(post => post.node.frontmatter.templateKey === "blog-post")
-          .map(({ node: post }) => {
-            return (
-              <Content key={post.id}>
-                <PostHeader>
-                  {post.frontmatter.category}
-                  <Link to={post.frontmatter.path}>
-                    {post.frontmatter.title}
-                  </Link>
-                </PostHeader>
-
-                <span> &bull; </span>
-                <small>{post.frontmatter.date}</small>
-
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.frontmatter.path}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </Content>
-            );
-          })}
-      </Container>
-    </div>
+  let { edges: posts } = data.allMarkdownRemark;
+  posts = posts.filter(
+    post => post.node.frontmatter.templateKey === "blog-post"
   );
+
+  return <PostPage posts={posts} />;
 };
+
 const Post = styled.section`
   margin: 7rem auto;
   max-width: 800px;
@@ -63,6 +37,9 @@ export const pageQuery = graphql`
             date
             path
             category
+          }
+          fields {
+            categorySlug
           }
         }
       }

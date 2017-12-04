@@ -1,38 +1,11 @@
 import React from "react";
 import Helmet from "react-helmet";
 import styled from "styled-components";
+import Post from "../components/Post";
 
-export default function Template({ data }) {
-  const { markdownRemark: post } = data;
-  return (
-    <Post>
-      <Helmet title={`Blog | ${post.frontmatter.title}`} />
-      <PostHeader>{post.frontmatter.title}</PostHeader>
-      <PostBody>
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <p>{post.frontmatter.description}</p>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </div>
-        </div>
-      </PostBody>
-    </Post>
-  );
-}
-
-const Post = styled.section`
-  margin: 7rem auto;
-  max-width: 800px;
-`;
-
-const PostHeader = styled.span`
-  font-size: 2rem;
-  font-weight: bold;
-`;
-
-const PostBody = styled.div`
-  margin: 0 auto;
-`;
+export default ({ data }) => {
+  return <Post post={data.markdownRemark} />;
+};
 
 export const pageQuery = graphql`
   query TechPostByPath($path: String!) {
@@ -43,6 +16,10 @@ export const pageQuery = graphql`
         date
         title
         description
+        category
+      }
+      fields {
+        categorySlug
       }
     }
   }

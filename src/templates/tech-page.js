@@ -1,13 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "gatsby-link";
-import { Container, Content } from "../components/UI";
-
-const PostHeader = styled.p`
-  font-size: 1.5rem;
-  color: #343a40;
-  font-weight: 500;
-`;
+import { Container, Content, CategoryLink, PostHeader } from "../components/UI";
 
 export default ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
@@ -20,8 +14,12 @@ export default ({ data }) => {
           .map(({ node: post }) => {
             return (
               <Content key={post.id}>
+                <CategoryLink>
+                  <Link to={post.fields.categorySlug}>
+                    {post.frontmatter.category}
+                  </Link>
+                </CategoryLink>
                 <PostHeader>
-                  {post.frontmatter.category}
                   <Link to={post.frontmatter.path}>
                     {post.frontmatter.title}
                   </Link>
@@ -63,6 +61,9 @@ export const pageQuery = graphql`
             date
             path
             category
+          }
+          fields {
+            categorySlug
           }
         }
       }
