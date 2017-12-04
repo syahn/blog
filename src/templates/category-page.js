@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "gatsby-link";
-import { Container } from "../components/UI";
-
-const PostHeader = styled.p`
-  font-size: 1.5rem;
-  color: #343a40;
-  font-weight: 500;
-`;
+import { Container, PostHeader } from "../components/UI";
 
 export default ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark;
+  let posts;
+
+  if (data.allMarkdownRemark !== null) {
+    const { edges } = data.allMarkdownRemark;
+    posts = edges;
+  } else {
+    return;
+  }
 
   return (
     <div>
@@ -44,10 +45,6 @@ export default ({ data }) => {
     </div>
   );
 };
-const Post = styled.section`
-  margin: 7rem auto;
-  max-width: 800px;
-`;
 
 export const pageQuery = graphql`
   query CategoryQuery($category: String) {
