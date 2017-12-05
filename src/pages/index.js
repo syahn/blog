@@ -32,12 +32,12 @@ export default class IndexPage extends React.Component {
           {posts.map(({ node: post }) => {
             return (
               <Content key={post.id}>
+                <CategoryLink>
+                  <Link to={post.fields.categorySlug}>
+                    {post.frontmatter.category}
+                  </Link>
+                </CategoryLink>
                 <Link to={post.frontmatter.path}>
-                  <CategoryLink>
-                    <Link to={post.fields.categorySlug}>
-                      {post.frontmatter.category}
-                    </Link>
-                  </CategoryLink>
                   <PostHeader>{post.frontmatter.title}</PostHeader>
                   <small>{post.frontmatter.date}</small>
                   <p>{post.excerpt}</p>

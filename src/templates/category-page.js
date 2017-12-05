@@ -1,53 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "gatsby-link";
-import { Container, PostHeader } from "../components/UI";
+import PostPage from "../components/PostPage";
+import { Container, PostHeader, Content, CategoryLink } from "../components/UI";
 
 export default ({ data }) => {
-  let posts;
+  const { edges: posts } = data.allMarkdownRemark;
 
-  if (data.allMarkdownRemark !== null) {
-    const { edges } = data.allMarkdownRemark;
-    posts = edges;
-  } else {
-    return;
-  }
-
-  return (
-    <div>
-      <Container>
-        {posts.map(({ node: post }) => {
-          return (
-            <div
-              className="content"
-              style={{ padding: "6em 2.5em 0" }}
-              key={post.id}
-            >
-              <PostHeader>
-                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-              </PostHeader>
-
-              <span> &bull; </span>
-              <small>{post.frontmatter.date}</small>
-
-              <p>
-                {post.excerpt}
-                <br />
-                <br />
-                <Link className="button is-small" to={post.frontmatter.path}>
-                  Keep Reading →
-                </Link>
-              </p>
-            </div>
-          );
-        })}
-      </Container>
-    </div>
-  );
+  return <PostPage posts={posts} />;
 };
 
 export const pageQuery = graphql`
-  query CategoryQuery($category: String) {
+  query CategoryPage($category: String) {
     allMarkdownRemark(
       filter: {
         frontmatter: { category: { eq: $category }, layout: { eq: "post" } }
@@ -64,6 +28,9 @@ export const pageQuery = graphql`
             date
             path
             category
+          }
+          fields {
+            categorySlug
           }
         }
       }

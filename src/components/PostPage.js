@@ -9,15 +9,13 @@ export default function PostPage({ posts }) {
       {posts.map(({ node: post }) => {
         return (
           <Content key={post.id}>
+            <CategoryLink>
+              <Link to={post.fields.categorySlug}>
+                {post.frontmatter.category}
+              </Link>
+            </CategoryLink>
             <Link to={post.frontmatter.path}>
-              <CategoryLink>
-                <Link to={post.fields.categorySlug}>
-                  {post.frontmatter.category}
-                </Link>
-              </CategoryLink>
-              <PostHeader>
-                <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-              </PostHeader>
+              <PostHeader>{post.frontmatter.title}</PostHeader>
               <small>{post.frontmatter.date}</small>
               <p>{post.excerpt}</p>
             </Link>

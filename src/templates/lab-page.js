@@ -7,7 +7,7 @@ export default ({ data }) => {
 };
 
 export const aboutPageQuery = graphql`
-  query AboutPage($path: String!) {
+  query LabPage($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
