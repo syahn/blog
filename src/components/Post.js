@@ -10,7 +10,7 @@ function Post({ post }) {
       <Helmet title={`Blog | ${post.frontmatter.title}`} />
       <Content>
         <CategoryLink>
-          {/* <Link to={post.fields.categorySlug}>{post.frontmatter.category}</Link> */}
+          <Link to={post.fields.categorySlug}>{post.frontmatter.category}</Link>
         </CategoryLink>
         <PostHeader>{post.frontmatter.title}</PostHeader>
         <p>{post.frontmatter.description}</p>

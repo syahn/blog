@@ -5,6 +5,7 @@ import PostPage from "../components/PostPage";
 import { Container, PostHeader, Content, CategoryLink } from "../components/UI";
 
 export default ({ data }) => {
+  console.log(data);
   const { edges: posts } = data.allMarkdownRemark;
 
   return <PostPage posts={posts} />;

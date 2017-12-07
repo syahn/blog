@@ -48,6 +48,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
   const categoryTemplate = path.resolve("./src/templates/category-page.js");
+
   return graphql(`
     {
       allMarkdownRemark(
