@@ -6,9 +6,10 @@ import { Container, PostHeader, Content, CategoryLink } from "../components/UI";
 
 export default ({ data }) => {
   console.log(data);
+
   const { edges: posts } = data.allMarkdownRemark;
 
-  return <PostPage posts={posts} />;
+  return posts ? <PostPage posts={posts} /> : null;
 };
 
 export const pageQuery = graphql`
