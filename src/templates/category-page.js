@@ -8,7 +8,7 @@ export default ({ data }) => {
   console.log(data);
 
   const fetchedData = data.allMarkdownRemark;
-  const posts = fetchedData ? null : fetchedData.edges;
+  const posts = fetchedData !== null ? fetchedData.edges : null;
 
   return posts ? <PostPage posts={posts} /> : null;
 };
