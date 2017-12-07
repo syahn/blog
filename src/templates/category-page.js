@@ -7,7 +7,7 @@ import { Container, PostHeader, Content, CategoryLink } from "../components/UI";
 export default ({ data }) => {
   console.log(data);
 
-  const { edges: posts } = data.allMarkdownRemark;
+  const posts = data.allMarkdownRemark.edges;
 
   return posts ? <PostPage posts={posts} /> : null;
 };
