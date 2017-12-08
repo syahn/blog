@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import Link from "gatsby-link";
 import styled from "styled-components";
-import { Container, PostHeader, Content, CategoryLink } from "./UI";
+import { Container, PostHeader, Content, CategoryLink, BodyText } from "./UI";
 
 function Post({ post }) {
   return (
@@ -14,7 +14,7 @@ function Post({ post }) {
         </CategoryLink>
         <PostHeader>{post.frontmatter.title}</PostHeader>
         <p>{post.frontmatter.description}</p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <BodyText dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content>
     </Container>
   );

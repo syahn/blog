@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "gatsby-link";
-import { Container, Content, CategoryLink, PostHeader } from "../components/UI";
+import { Container, Content, CategoryLink, PostHeader, BodyText } from "./UI";
 
 export default function PostPage({ posts }) {
   return (
@@ -17,7 +17,7 @@ export default function PostPage({ posts }) {
             <Link to={post.frontmatter.path}>
               <PostHeader>{post.frontmatter.title}</PostHeader>
               <small>{post.frontmatter.date}</small>
-              <p>{post.excerpt}</p>
+              <BodyText>{post.excerpt}</BodyText>
             </Link>
           </Content>
         );

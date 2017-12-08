@@ -32,3 +32,7 @@ export const PostHeader = styled.div`
   margin: 0.1rem 0 0.7rem;
   line-height: 2.2rem;
 `;
+
+export const BodyText = styled.p`
+  font-family: KoPub Batang;
+`;
