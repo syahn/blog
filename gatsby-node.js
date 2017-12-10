@@ -54,6 +54,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   return graphql(`
     {
+      site {
+        siteMetadata {
+          disqusID
+          siteUrl
+        }
+      }
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000

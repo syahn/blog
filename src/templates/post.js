@@ -4,13 +4,19 @@ import styled from "styled-components";
 import Post from "../components/Post";
 
 export default ({ data }) => {
-  return <Post post={data.markdownRemark} />;
+  return <Post post={data.markdownRemark} site={data.site} />;
 };
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
+  query PostByPath($path: String!) {
+    site {
+      siteMetadata {
+        disqusID
+      }
+    }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      id
       frontmatter {
         path
         date
@@ -24,3 +30,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+// (formatString: "DD MMMM, YYYY")

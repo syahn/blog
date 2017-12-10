@@ -2,9 +2,12 @@ import React from "react";
 import Helmet from "react-helmet";
 import Link from "gatsby-link";
 import styled from "styled-components";
+
+import ReactDisqusComments from "react-disqus-comments";
 import { Container, PostHeader, Content, CategoryLink, BodyText } from "./UI";
 
-function Post({ post }) {
+function Post({ post, site }) {
+  console.log("post: " + site);
   return (
     <Container>
       <Helmet title={`Blog | ${post.frontmatter.title}`} />
@@ -14,6 +17,13 @@ function Post({ post }) {
         </CategoryLink>
         <PostHeader main>{post.frontmatter.title}</PostHeader>
         <BodyText dangerouslySetInnerHTML={{ __html: post.html }} />
+        <ReactDisqusComments
+          shortname={site.siteMetadata.disqusID}
+          identifier={post.frontmatter.title}
+          title={post.frontmatter.title}
+          url={site.siteMetadata.siteUrl + post.frontmatter.path}
+          category_id={post.id}
+        />
       </Content>
     </Container>
   );

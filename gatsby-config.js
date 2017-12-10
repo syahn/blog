@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Frank's`,
+    disqusID: "frankahn",
+    siteUrl: "https://frankahn.com",
     author: {
       name: "Frank Ahn",
       email: "#",
