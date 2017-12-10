@@ -3,9 +3,9 @@ import "../assets/main.css";
 
 import usWebDesignStandardsTheme from "typography-theme-us-web-design-standards";
 
+usWebDesignStandardsTheme.baseColor = "#343a40";
+usWebDesignStandardsTheme.headerFontFamily = ["Source Sans Pro", "sans-serif"];
 const typography = new Typography(usWebDesignStandardsTheme);
-
-typography.baseColor = "#343a40";
 
 typography.overrideThemeStyles = ({ rhythm }, options) => ({
   p: {

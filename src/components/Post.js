@@ -12,8 +12,7 @@ function Post({ post }) {
         <CategoryLink>
           <Link to={post.fields.categorySlug}>{post.frontmatter.category}</Link>
         </CategoryLink>
-        <PostHeader>{post.frontmatter.title}</PostHeader>
-        <p>{post.frontmatter.description}</p>
+        <PostHeader main>{post.frontmatter.title}</PostHeader>
         <BodyText dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content>
     </Container>

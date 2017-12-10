@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "gatsby-link";
+import moment from "moment";
 import { Container, Content, CategoryLink, PostHeader, BodyText } from "./UI";
 
 export default function PostPage({ posts }) {
@@ -16,7 +17,7 @@ export default function PostPage({ posts }) {
             </CategoryLink>
             <Link to={post.frontmatter.path}>
               <PostHeader>{post.frontmatter.title}</PostHeader>
-              <small>{post.frontmatter.date}</small>
+              <small>{moment(post.frontmatter.date).format("MMM Do YY")}</small>
               <BodyText>{post.excerpt}</BodyText>
             </Link>
           </Content>
