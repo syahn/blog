@@ -1,20 +1,6 @@
 module.exports = {
   siteMetadata: {
     title: `Frank's`,
-    menu: [
-      {
-        label: "Articles",
-        path: "/"
-      },
-      {
-        label: "About me",
-        path: "/about/"
-      },
-      {
-        label: "Contact me",
-        path: "/contact/"
-      }
-    ],
     author: {
       name: "Frank Ahn",
       email: "#",
@@ -61,6 +47,12 @@ module.exports = {
             }
           }
         ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-110993623-1"
       }
     }
   ]
