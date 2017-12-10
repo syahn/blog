@@ -12,6 +12,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         disqusID
+        siteUrl
       }
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {

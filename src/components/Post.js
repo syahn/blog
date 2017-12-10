@@ -7,7 +7,7 @@ import ReactDisqusComments from "react-disqus-comments";
 import { Container, PostHeader, Content, CategoryLink, BodyText } from "./UI";
 
 function Post({ post, site }) {
-  console.log("post: " + site);
+  console.log("post: " + site.siteMetadata.siteUrl + post.frontmatter.path);
   return (
     <Container>
       <Helmet title={`Blog | ${post.frontmatter.title}`} />
