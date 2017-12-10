@@ -73,7 +73,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               layout
               menu
               path
-              date
+              date(formatString: "YYYY-MM-DD")
               title
               image
               heading

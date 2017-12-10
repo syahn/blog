@@ -20,7 +20,7 @@ export const pageQuery = graphql`
       id
       frontmatter {
         path
-        date
+        date(formatString: "YYYY-MM-DD")
         title
         description
         category

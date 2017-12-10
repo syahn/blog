@@ -15,6 +15,9 @@ export default function PostPage({ posts }) {
   return (
     <Container>
       {posts.map(({ node: post }) => {
+        // console.log("date", post.frontmatter.date);
+        // const date =
+        //   post.frontmatter.date && post.frontmatter.date.split("T")[0];
         return (
           <Content key={post.id}>
             <CategoryLink>

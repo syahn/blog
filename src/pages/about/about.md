@@ -3,7 +3,6 @@ layout: about-page
 path: /about
 title: '안녕하세요, Frank입니다.'
 ---
-<br />
 <div>
 <span>엔지니어링을 통한 유려한 인터렉션 구현을 지향합니다.</span>
 <span>훌륭한 IT 제품을 만드는 것이 목표입니다.</span>
