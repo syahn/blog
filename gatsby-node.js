@@ -47,7 +47,10 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
-  const categoryTemplate = path.resolve("./src/templates/category-page.js");
+  const categoryTemplate = path.resolve(
+    "./src/templates/pages/category-page.js"
+  );
+  const postTemplate = path.resolve("./src/templates/post.js");
 
   return graphql(`
     {
@@ -61,7 +64,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             html
             id
             frontmatter {
-              templateKey
+              layout
+              menu
               path
               date
               title
@@ -137,13 +141,21 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         });
       });
 
-      createPage({
-        path: node.frontmatter.path,
-        component: path.resolve(
-          `src/templates/${String(node.frontmatter.templateKey)}.js`
-        ),
-        context: {} // additional data can be passed via context
-      });
+      if (node.frontmatter.layout === "post") {
+        createPage({
+          path: node.frontmatter.path,
+          component: postTemplate,
+          context: {} // additional data can be passed via context
+        });
+      } else {
+        createPage({
+          path: node.frontmatter.path,
+          component: path.resolve(
+            `./src/templates/pages/${node.frontmatter.layout}.js`
+          ),
+          context: {} // additional data can be passed via context
+        });
+      }
 
       // if (node.frontmatter.layout === "page") {
       //   createPage({

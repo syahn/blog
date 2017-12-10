@@ -1,10 +1,10 @@
 ---
-templateKey: 'blog-post'
 path: /blog/skm-architects-방문-그리고-켄민성진
 title: 'SKM Architects 방문, 그리고 켄민성진'
 layout: post
-category: "Frank's log"
-date: 2017-10-28
+menu: /blog
+category: Frank's log
+date: "2017-10-02"
 ---
   오픈하우스서울 2017 프로그램을 통해 SKM Architects 건축사무소의 오피스를 방문했다. 건축가 켄민성진님의 이야기를 듣고 사옥 구경을 할 수 있었다. 프로그램에 참여한 많은 스튜디오들 중에 SKM을 선택한 이유는 아난티 코브를 설계한 곳이기 때문이다. 어떤 곳이길래 그런 대형 프로젝트를 맡고, 성공적으로 끝마쳤는지 궁금했다. 프로그램의 시작은 민성진님의 인생, 그리고 작업들을 소개해주는 프레젠테이션으로 1시간 동안 진행되었으며, 30분 정도는 그가 전체 스튜디오를 소개해주었다.
 

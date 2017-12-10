@@ -1,4 +1,4 @@
 ---
-templateKey: 'tech-page'
+layout: 'post-page'
 path: /tech
 ---

@@ -1,5 +1,5 @@
 ---
-templateKey: 'about-page'
+layout: 'lab-page'
 path: /lab
 title: 
 ---

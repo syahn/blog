@@ -1,5 +1,5 @@
 ---
-templateKey: about-page
+layout: about-page
 path: /about
 title: '안녕하세요, Frank입니다.'
 ---

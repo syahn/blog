@@ -1,5 +1,5 @@
 ---
-templateKey: 'blog-page'
+layout: 'post-page'
 path: /blog
 
 ---

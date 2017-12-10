@@ -1,11 +1,10 @@
 ---
-templateKey: 'tech-post'
 title: background-clip에 대하여 
 layout: post
+menu: /tech
 path: "/tech/background-clip에-대하여"
 category: "CSS"
-date: 2017-12-3
-
+date: "2017-12-30"
 ---
 background-clip은 element의 background의 색 혹은 이미지가 element 내에서 border를 기준으로 어디까지 확장될지를 지정한다. 
 

@@ -49,7 +49,6 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            templateKey
             date
             path
             category
