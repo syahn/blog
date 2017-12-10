@@ -11,8 +11,8 @@ const PostHeader = styled.p`
 `;
 
 export default ({ data }) => {
-  let { edges: posts } = data.allMarkdownRemark;
-  posts = posts.filter(
+  let { edges } = data.allMarkdownRemark;
+  const posts = edges.filter(
     post => post.node.frontmatter.templateKey === "blog-post"
   );
 

@@ -29,15 +29,20 @@ export const PostHeader = styled.div`
   font-size: ${props => (props.main ? "1.5rem" : "1.3rem")};
   color: #343a40;
   font-weight: 700;
-  margin: 0.1rem 0 0.5rem;
+  margin-top: 0.3rem;
   line-height: 2.2rem;
+`;
+
+export const DateText = styled.small`
+  color: hsla(0, 0%, 0%, 0.5);
+  font-size: 0.7rem;
 `;
 
 export const BodyText = styled.p`
   font-family: KoPub Batang;
   font-weight: lighter;
   line-height: 1.8rem;
-  margin-top: 1rem;
+  margin-top: 0.35rem;
 
   span {
     display: block;
