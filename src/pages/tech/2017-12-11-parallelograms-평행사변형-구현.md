@@ -3,7 +3,7 @@ layout: post
 menu: /tech
 path: /tech/parallelograms
 title: Parallelograms - 평행사변형 구현
-category: css
+category: CSS
 date: 2017-12-11T11:32:37.617Z
 ---
 
@@ -22,8 +22,8 @@ CSS SECRETS에서 CSS로 Pararellogram(평행사변형)을 만드는 방법을 �
 
 ## 0. Demo code
 
-<p data-height="339" data-theme-id="dark" data-slug-hash="rYgqGo" data-default-tab="css,result" data-user="syahn" data-embed-version="2" data-pen-title="Parallelograms" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/syahn/pen/rYgqGo/">Parallelograms</a> by Frank Ahn (<a href="https://codepen.io/syahn">@syahn</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<iframe height='339' scrolling='no' title='Parallelograms' src='//codepen.io/syahn/embed/preview/rYgqGo/?height=339&theme-id=dark&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/syahn/pen/rYgqGo/'>Parallelograms</a> by Frank Ahn (<a href='https://codepen.io/syahn'>@syahn</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 
 <br />
