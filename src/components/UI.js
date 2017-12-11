@@ -7,7 +7,7 @@ export const Container = styled.nav`
 `;
 
 export const Content = styled.div`
-  padding: 1rem 5rem 0;
+  padding: 2rem 7rem 0;
 
   @media (max-width: 680px) {
     padding: 1rem 1.5rem 0;
@@ -41,7 +41,8 @@ export const DateText = styled.small`
 export const BodyText = styled.p`
   font-family: KoPub Batang;
   font-weight: lighter;
-  line-height: 1.8rem;
+  font-size: 14px;
+  line-height: 1.7rem;
   margin-top: 0.35rem;
 
   span {

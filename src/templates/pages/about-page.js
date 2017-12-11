@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Post from "../../components/Post";
-import { Container, Content, CategoryLink } from "../../components/UI";
+import { Container, CategoryLink } from "../../components/UI";
 import Helmet from "react-helmet";
 
 export default ({ data }) => {
@@ -17,6 +17,14 @@ export default ({ data }) => {
   );
 };
 
+const Content = styled.div`
+  padding: 2rem 2rem 0 11rem;
+
+  @media (max-width: 680px) {
+    padding: 1rem 1.5rem 0;
+  }
+`;
+
 const AboutHeader = styled.div`
   font-size: 1.3rem;
   color: #343a40;
@@ -28,7 +36,8 @@ const AboutHeader = styled.div`
 const BodyText = styled.p`
   font-family: KoPub Batang;
   font-weight: lighter;
-  line-height: 1.8rem;
+  font-size: 14px;
+  line-height: 1.7rem;
   margin-top: 1rem;
 
   span {
