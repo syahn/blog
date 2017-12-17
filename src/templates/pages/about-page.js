@@ -18,7 +18,7 @@ export default ({ data }) => {
 };
 
 const Content = styled.div`
-  padding: 2rem 2rem 0 11rem;
+  padding: 2rem 2rem 0 10.5rem;
 
   @media (max-width: 680px) {
     padding: 1rem 1.5rem 0;
@@ -29,15 +29,15 @@ const AboutHeader = styled.div`
   font-size: 1.3rem;
   color: #343a40;
   font-weight: 700;
-  margin: 0.1rem 0 0.5rem;
+  margin: 0.1rem 0 1.8rem;
   line-height: 2.2rem;
 `;
 
 const BodyText = styled.p`
   font-family: KoPub Batang;
   font-weight: lighter;
-  font-size: 0.85rem;
-  line-height: 1.7rem;
+  font-size: 0.95rem;
+  line-height: 1.8rem;
   margin-top: 1rem;
 
   span {

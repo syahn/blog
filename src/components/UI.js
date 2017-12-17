@@ -40,9 +40,9 @@ export const DateText = styled.small`
 
 export const BodyText = styled.p`
   font-family: KoPub Batang;
+  font-size: 0.95rem;
   font-weight: lighter;
-  font-size: 0.85rem;
-  line-height: 1.7rem;
+  line-height: 1.8rem;
   margin-top: 0.35rem;
 
   span {
