@@ -14,6 +14,11 @@ import {
 } from "./UI";
 
 function Post({ post, site }) {
+  console.log(post);
+  if (post === null) {
+    return null;
+  } 
+
   return (
     <Container>
       <Helmet title={`Blog | ${post.frontmatter.title}`} />

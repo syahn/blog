@@ -1,7 +1,7 @@
 ---
 layout: post
 menu: /tech
-path: tech/hamburger-button
+path: /tech/hamburger-button
 title: Hamburger button
 category: CSS
 date: 2017-12-18T12:56:33.655Z
@@ -13,12 +13,9 @@ date: 2017-12-18T12:56:33.655Z
 transition timing function에 어떤 값을 주느냐에 따라 애니메이션에 미묘한 맛이 달라지는 것을 느꼈는데, 어떤게 더 나은 것인지 감이 오지 않는다. 전체적으로 아직 부족한 부분이 있는 것같은데 그게 무엇인지 콕 찝어서 말을 못하겠다. 아직 경험이 많이 부족한 것같다. 부지런히 만들어봐야겠다.
 
 <iframe height='188' scrolling='no' title='Animated Hamburger' src='//codepen.io/syahn/embed/MrKENg/?height=178&theme-id=dark&default-tab=result,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen Animated Hamburger by Frank Ahn (@syahn) on CodePen.
-
 </iframe>
 
-
-
-Reference
+### Reference
 
 - Menu "Hamburger" Icon Animations by Jesse Couch
   - https://codepen.io/designcouch/pen/Atyop
