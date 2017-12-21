@@ -5,13 +5,44 @@ import Link from "gatsby-link";
 // import './style.scss';
 
 class Header extends React.Component {
+  state = {
+    scrollDowned: false,
+    isLogoChanged: false
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = (event) => {
+    let scrollTop = document.scrollingElement.scrollTop;
+    const { isLogoChanged } = this.state;
+
+    if (scrollTop > 50 && !isLogoChanged) {
+      this.setState({
+        scrollDowned: true,
+        isLogoChanged: true
+      })
+    } else if (scrollTop < 50 && isLogoChanged) {
+      this.setState({
+        scrollDowned: false,
+        isLogoChanged: false
+      })
+    }
+  }
+
   render() {
     const menus = ["about", "blog", "tech", "lab"];
+    const { scrollDowned } = this.state;
 
     return (
       <Container>
         <Link to="/">
-          <Logo>Frank's</Logo>
+          <Logo scrollDowned={scrollDowned}>Frank's</Logo>
         </Link>
         <Menu>
           {menus.map(menu => (
@@ -38,6 +69,11 @@ const Logo = styled.span`
   position: absolute;
   font-weight: 700;
   padding: 1rem 1.5rem;
+  transition-duration: 0.5s;
+
+  @media (max-width: 680px) {
+    color: ${props => (props.scrollDowned === true) ? '#082243' : 'inherit'}
+     
 `;
 
 const Menu = styled.ul`
