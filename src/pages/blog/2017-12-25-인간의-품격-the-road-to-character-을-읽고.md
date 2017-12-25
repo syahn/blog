@@ -2,7 +2,7 @@
 layout: post
 menu: /blog
 path: /blog/The-Road-To-Charater
-title: 인간의 품격(The Road to Character)을 읽고
+title: 인간의 품격을 읽고
 category: book
 date: 2017-12-25T11:57:14.634Z
 ---
