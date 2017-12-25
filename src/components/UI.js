@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import "../assets/main.css";
 
 export const Container = styled.nav`
   max-width: 700px;
