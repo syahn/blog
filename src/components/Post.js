@@ -14,7 +14,6 @@ import {
 } from "./UI";
 
 function Post({ post, site }) {
-  console.log(post);
   if (post === null) {
     return null;
   } 
