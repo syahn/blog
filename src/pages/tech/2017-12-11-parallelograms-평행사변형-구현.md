@@ -22,7 +22,7 @@ CSS SECRETS에서 CSS로 Pararellogram(평행사변형)을 만드는 방법을 �
 
 ## 0. Demo code
 
-<iframe height='339' scrolling='no' title='Parallelograms' src='//codepen.io/syahn/embed/preview/rYgqGo/?height=339&theme-id=dark&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/syahn/pen/rYgqGo/'>Parallelograms</a> by Frank Ahn (<a href='https://codepen.io/syahn'>@syahn</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='339' scrolling='no' title='Parallelograms' src='//codepen.io/syahn/embed/preview/rYgqGo/?height=339&theme-id=dark&default-tab=result,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/syahn/pen/rYgqGo/'>Parallelograms</a> by Frank Ahn (<a href='https://codepen.io/syahn'>@syahn</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 
