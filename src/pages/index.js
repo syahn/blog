@@ -5,6 +5,7 @@ import Script from "react-load-script";
 import styled from "styled-components";
 import PostPage from "../components/PostPage";
 import { Container, Content, CategoryLink, PostHeader } from "../components/UI";
+import "../assets/main.css";
 
 export default class IndexPage extends React.Component {
   handleScriptLoad() {
