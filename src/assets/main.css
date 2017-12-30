@@ -6,3 +6,7 @@ a:visited {
   color: inherit;
   transition-duration: 0.3s;
 }
+
+body {
+  font-family: "Arial";
+}
