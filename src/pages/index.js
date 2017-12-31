@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import Link, {withPrefix} from "gatsby-link";
 import Helmet from "react-helmet";
 import Script from "react-load-script";
 import styled from "styled-components";
@@ -24,7 +24,7 @@ export default class IndexPage extends React.Component {
   render() {
     const { allMarkdownRemark, site } = this.props.data;
     const posts = allMarkdownRemark.edges;
-    const { twitter } = site.siteMetadata.author.twitter;
+    const siteMeta = site.siteMetadata;
 
     return (
       <div>
@@ -33,11 +33,11 @@ export default class IndexPage extends React.Component {
           <meta name="twitter:card" content="summary_large_image" />
           <meta
             name="twitter:creator"
-            content={twitter}
+            content={siteMeta.author.twitter}
           />
           <meta name="twitter:title" content={"Frank's"} />
           <meta name="twitter:description" content={"Frank's blog"} />
-          <meta name="twitter:image" content={"https://frankahn/static/favicon.f1ab6007.png"} />
+          <meta name="twitter:image" content={siteMeta.siteUrl + logo} />
         </Helmet>
         <Script
           url="https://identity.netlify.com/v1/netlify-identity-widget.js"
@@ -55,6 +55,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     site {
       siteMetadata {
+        siteUrl
         author {
           twitter
         }

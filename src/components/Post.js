@@ -21,6 +21,7 @@ function Post({ post, site }) {
   }
 
   const { title, category, date } = post.frontmatter;
+  const siteMeta = site.siteMetadata;
   
   return (
     <Container>
@@ -30,16 +31,15 @@ function Post({ post, site }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:creator"
-          content={site.siteMetadata.author.twitter}
+          content={siteMeta.author.twitter}
         />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={post.excerpt} />
-        <meta name="twitter:image" content={"https://frankahn/static/favicon.f1ab6007.png"} />
+        <meta name="twitter:image" content={siteMeta.siteUrl + logo} />
         <meta name="twitter:image:alt" content={"Frank's"} /> 
       </Helmet>
 
       <Content>
-        {logo}
         <CategoryLink>
           <Link to={post.fields.categorySlug}>{category}</Link>
         </CategoryLink>
