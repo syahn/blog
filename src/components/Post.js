@@ -21,7 +21,7 @@ function Post({ post, site }) {
   }
 
   const { title, category, date } = post.frontmatter;
-  console.log(logo); 
+  
   return (
     <Container>
       <Helmet>
@@ -39,6 +39,7 @@ function Post({ post, site }) {
       </Helmet>
 
       <Content>
+        {logo}
         <CategoryLink>
           <Link to={post.fields.categorySlug}>{category}</Link>
         </CategoryLink>
