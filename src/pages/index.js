@@ -63,10 +63,11 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       filter: { frontmatter: { layout: { eq: "post" } } }
       sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 10
     ) {
       edges {
         node {
-          excerpt(pruneLength: 200)
+          excerpt(pruneLength: 100)
           id
           frontmatter {
             title
