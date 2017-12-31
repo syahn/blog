@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "../assets/main.css";
 
 export const Container = styled.nav`
   max-width: 700px;
@@ -40,7 +39,7 @@ export const DateText = styled.small`
 `;
 
 export const BodyText = styled.p`
-  font-family: KoPub Batang;
+  font-family: "KoPub Batang";
   font-size: 0.95rem;
   font-weight: lighter;
   line-height: 1.8rem;

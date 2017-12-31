@@ -34,7 +34,7 @@ const AboutHeader = styled.div`
 `;
 
 const BodyText = styled.p`
-  font-family: KoPub Batang;
+  font-family: "KoPub Batang";
   font-weight: lighter;
   font-size: 0.95rem;
   line-height: 1.8rem;
