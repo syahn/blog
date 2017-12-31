@@ -37,7 +37,7 @@ export default class IndexPage extends React.Component {
           />
           <meta name="twitter:title" content={"Frank's"} />
           <meta name="twitter:description" content={"Frank's blog"} />
-          <meta name="twitter:image" content={logo} />
+          <meta name="twitter:image" content={"https://frankahn/static/favicon.f1ab6007.png"} />
         </Helmet>
         <Script
           url="https://identity.netlify.com/v1/netlify-identity-widget.js"

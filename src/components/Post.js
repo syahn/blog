@@ -21,7 +21,7 @@ function Post({ post, site }) {
   }
 
   const { title, category, date } = post.frontmatter;
-  
+  console.log(logo); 
   return (
     <Container>
       <Helmet>
@@ -34,7 +34,7 @@ function Post({ post, site }) {
         />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={post.excerpt} />
-        <meta name="twitter:image" content={logo} />
+        <meta name="twitter:image" content={"https://frankahn/static/favicon.f1ab6007.png"} />
         <meta name="twitter:image:alt" content={"Frank's"} /> 
       </Helmet>
 
