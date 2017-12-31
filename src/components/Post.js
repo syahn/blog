@@ -17,8 +17,9 @@ function Post({ post, site }) {
   if (post === null) {
     return null;
   } 
-
+  console.log(post.html);
   return (
+
     <Container>
       <Helmet title={`Blog | ${post.frontmatter.title}`} />
       <Content>
@@ -28,16 +29,16 @@ function Post({ post, site }) {
         <PostHeader main>{post.frontmatter.title}</PostHeader>
         <DateText>{DateConverter(post.frontmatter.date)}</DateText>
         <BodyText dangerouslySetInnerHTML={{ __html: post.html }} />
-        {/* <ReactDisqusComments
-          shortname={site.siteMetadata.disqusID}
-          identifier={post.frontmatter.title}
-          title={post.frontmatter.title}
-          url={site.siteMetadata.siteUrl + post.frontmatter.path}
-          category_id={post.id}
-        /> */}
       </Content>
     </Container>
   );
 }
 
 export default Post;
+   {/* <ReactDisqusComments
+          shortname={site.siteMetadata.disqusID}
+          identifier={post.frontmatter.title}
+          title={post.frontmatter.title}
+          url={site.siteMetadata.siteUrl + post.frontmatter.path}
+          category_id={post.id}
+        /> */}
