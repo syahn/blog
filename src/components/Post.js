@@ -20,7 +20,7 @@ function Post({ post, site }) {
     return null;
   }
 
-  const { title, image, category, date } = post.frontmatter;
+  const { title, category, date } = post.frontmatter;
   
   return (
     <Container>
@@ -34,7 +34,8 @@ function Post({ post, site }) {
         />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={post.excerpt} />
-        <meta name="twitter:image" content={image || logo} />
+        <meta name="twitter:image" content={logo} />
+        <meta name="twitter:image:alt" content={"Frank's"} /> 
       </Helmet>
 
       <Content>
