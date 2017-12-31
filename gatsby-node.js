@@ -58,6 +58,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         siteMetadata {
           disqusID
           siteUrl
+          author {
+            twitter
+          }
         }
       }
       allMarkdownRemark(

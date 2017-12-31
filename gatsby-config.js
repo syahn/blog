@@ -5,9 +5,10 @@ module.exports = {
     siteUrl: "https://frankahn.com",
     author: {
       name: "Frank Ahn",
-      email: "#",
-      twitter: "#",
-      github: "#",
+      nameKor: "안상영",
+      email: "frankahn9@gmail.com",
+      twitter: "https://twitter.com/frankahn_",
+      github: "https://github.com/syahn",
       rss: "#"
     }
   },

@@ -13,10 +13,14 @@ export const pageQuery = graphql`
       siteMetadata {
         disqusID
         siteUrl
+        author {
+          twitter
+        }
       }
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      excerpt(pruneLength: 200)
       id
       frontmatter {
         path
