@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'KoPub Batang';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/kopubbatang/v3/KoPubBatang-Regular.ttf) format('truetype');
+}
+
 a,
 a:visited {
   text-decoration: none;
