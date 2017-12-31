@@ -26,7 +26,7 @@ export const CategoryLink = styled.span`
 `;
 
 export const PostHeader = styled.div`
-  font-size: ${props => (props.main ? "1.5rem" : "1.3rem")};
+  font-size: 1.2rem;
   color: #343a40;
   font-weight: 700;
   margin-top: 0.3rem;
