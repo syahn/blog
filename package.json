@@ -5,6 +5,7 @@
   "author": "Frank Ahn",
   "dependencies": {
     "bulma": "^0.6.0",
+    "font-kopub": "^1.5.0",
     "gatsby": "^1.9.63",
     "gatsby-link": "^1.6.21",
     "gatsby-plugin-favicon": "^2.1.1",
