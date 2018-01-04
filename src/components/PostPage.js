@@ -25,7 +25,7 @@ export default function PostPage({ posts }) {
             <Link to={post.frontmatter.path}>
               <PostHeader>{post.frontmatter.title}</PostHeader>
               <DateText>{DateConverter(post.frontmatter.date)}</DateText>
-              <BodyText>{post.excerpt}</BodyText>
+              <BodyText>{post.frontmatter.excerpt || post.excerpt}</BodyText>
             </Link>
           </Content>
         );

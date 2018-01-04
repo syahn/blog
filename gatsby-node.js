@@ -73,6 +73,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             html
             id
             frontmatter {
+              excerpt
               layout
               menu
               path
