@@ -10,7 +10,7 @@ title: '안녕하세요, Frank입니다.'
 <br />
 <div>
 <span>성균관대에서 동양 철학과 컴퓨터 공학을 전공하고,</span>
-<span>2017년 9월부터 Works Mobile의 웹메일팀에서</span>
+<span>2017년 9월부터 Works Mobile의 메일웹팀에서</span>
 <span>네이버 메일, Line Works 메일을 만들고 있습니다.</span>
 </div>
 <br />
