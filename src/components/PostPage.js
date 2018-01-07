@@ -12,6 +12,7 @@ import {
 } from "./UI";
 
 export default function PostPage({ posts }) {
+  console.log(posts);
   return (
     <Container>
       {posts.map(({ node: post }) => {

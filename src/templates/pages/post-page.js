@@ -36,6 +36,7 @@ export const pageQuery = graphql`
             date(formatString: "YYYY-MM-DD")
             path
             category
+            excerpt
           }
           fields {
             categorySlug
