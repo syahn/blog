@@ -39,12 +39,12 @@ const AboutHeader = styled.div`
   line-height: 2.2rem;
 `
 
-const BodyText = styled.p`
+const BodyText = styled.div`
   font-family: 'KoPub Batang';
   font-weight: lighter;
   font-size: 0.95rem;
   line-height: 1.8rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
 
   span {
     display: block;
@@ -61,7 +61,7 @@ const TwitterLogo = styled.a`
   background: ${props => `url(${props.imageUrl}) no-repeat`};
   position: relative;
   display: inline-block;
-  top: 6px;
+  top: 14px;
   left: -6px;
   width: 30px;
   height: 30px;
@@ -72,7 +72,7 @@ const Email = styled.span`
   color: rgba(0,0,0,0.4);
   font-family: 'KoPub Batang'; 
   font-size: 0.95rem;
-  top: -4px;
+  top: 4px;
   left: -8px;
 `;
 
