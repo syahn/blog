@@ -70,7 +70,6 @@ const TwitterLogo = styled.a`
 const Email = styled.span`
   position: relative;
   color: rgba(0,0,0,0.4);
-  font-family: 'KoPub Batang'; 
   font-size: 0.95rem;
   top: 4px;
   left: -8px;
