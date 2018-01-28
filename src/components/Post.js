@@ -6,6 +6,7 @@ import DateConverter from "../utils/DateCoverter";
 import config from "../../gatsby-config";
 import ReactDisqusComments from "react-disqus-comments";
 import logo from "../../src/favicon.png";
+import twitterThumbnail from "../../src/twitterThumbnail.png";
 import {
   Container,
   PostHeader,
@@ -28,7 +29,7 @@ function Post({ post, site }) {
       <Helmet>
         <title>{`Frank's | ${title}`}</title>
         {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:creator"
           content={siteMeta.author.twitter}
