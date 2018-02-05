@@ -11,7 +11,8 @@ const PostHeader = styled.p`
 `;
 
 export default ({ data }) => {
-  let { edges: posts } = data.allMarkdownRemark;
+  const { allMarkdownRemark } = data;
+  let posts = allMarkdownRemark ? allMarkdownRemark.edges : []; 
 
   return <PostPage posts={posts} />;
 };
